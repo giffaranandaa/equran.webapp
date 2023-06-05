@@ -5,7 +5,7 @@ import Logo from "../assets/logo.png"
 
 const Home = () => {
   return (
-    <div className="flex items-center justify-center h-screen">
+        <div className="flex items-center justify-center h-screen bg-[#fff7e7]">
         <div className="h-[350px] w-[90%] md:w-[50%]">
             <div className="flex flex-col items-center justify-center h-full gap-y-3">
                 <img src={Logo} alt="logo.png" className="w-[50%] h-auto"/>

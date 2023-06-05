@@ -38,7 +38,7 @@ const ListSurat = () => {
   }
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center bg-[#fff7e7]">
       <div className="my-10 w-[90%] lg:px-40">
         <div className="mx-auto flex items-center justify-center">
           <div className="h-12 w-full min-w-[200px]">
