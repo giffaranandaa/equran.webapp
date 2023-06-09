@@ -1,23 +1,20 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import ListSurat from "./pages/listSurat";
-import AsmaulHusna from "./pages/asmaulHusna"
-import Home from  "./pages/Home"
-import Surat from  "./pages/Surat"
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Routes from "./Router/Routes"
 
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <Routes/>
+      {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="list-surat" element={<ListSurat/>}></Route>
           <Route path="asmaul-husna" element={<AsmaulHusna/>}></Route>
           <Route path="ayat-surat/:suratId" element={<Surat/>}></Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 }
