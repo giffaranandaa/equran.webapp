@@ -4,8 +4,9 @@ import Card from "../components/Card"
 
 const asmaulHusna = () => {
   return (
-    <div className="flex items-center justify-center bg-[#fff7e7]">
-      <div className="my-10 w-[90%] ">
+    <div className="flex flex-col items-center justify-center bg-[#fff7e7]">
+      <div className="w-[90%] py-6">
+        <h1 className="text-[100px] text-center font-noto">اَللّهُ</h1>
           <Card/>
       </div>
     </div>

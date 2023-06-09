@@ -53,7 +53,7 @@ const Surat = () => {
   return (
     <div className="flex items-center justify-center">
       <div className="w-[100%] rounded-full">
-        <div className="p-5 px-10 bg-[#00a695] text-white flex items-center justify-between font-bold">
+        <div className="p-5 px-10 bg-[#116A7B] text-white flex items-center justify-between font-bold">
           <div className="text-start">
             <p>{suratDetail.tempatTurun}</p>
             <p>{suratDetail.jumlahAyat} Ayat</p>
@@ -71,7 +71,7 @@ const Surat = () => {
         {suratDetail.ayat.map((item, index) => (
           <div
             className={`py-5 px-10 border-b-2 p-4 ${
-              index % 2 === 0 ? "bg-white" : "bg-[#fff7e7]"
+              index % 2 === 0 ? "bg-white" : "bg-[#ece5c767]"
             }`}
           >
             <div className="flex justify-between">
@@ -80,24 +80,24 @@ const Surat = () => {
                   <img
                     src={border}
                     alt="border ayat"
-                    className="h-[60px] w-[60px]"
+                    className="h-[55px] w-[55px]"
                   />
                 </div>
-                <p className="font-noto absolute top-5 start-1/2 translate-middle-y -translate-x-1/2">
+                <p className="font-noto absolute top-4 start-1/2 translate-middle-y -translate-x-1/2">
                   {item.nomorAyat}
                 </p>
               </div>
               <div className="w-[80%]">
                 <p className="text-4xl mr-2 font-noto text-end leading-loose">
                   {item.teksArab}
-                  <span className="mr-5 py-1 px-3 text-[16px] border-b-2 border-[#00a695] text-[#00a695] rounded-xl">
+                  <span className="mr-5 py-1 px-3 text-[16px] border-b-2 border-[#116A7B] text-[#116A7B] rounded-xl">
                     .{convertToArabicNumber(item.nomorAyat.toString())}
                   </span>
                 </p>
               </div>
             </div>
             <div className="ml-16 w-[70%] mt-2 py-2">
-              <p className="mb-3 text-[#00a695] font-bold">{item.teksLatin}</p>
+              <p className="mb-3 text-[#116A7B] font-bold">{item.teksLatin}</p>
               <p className="italic">{item.teksIndonesia}</p>
             </div>
           </div>
