@@ -3,10 +3,12 @@ import asmaulHusna from "../api/asmaulHusna.json";
 
 const Card = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-10 px-5" style={{ direction: 'rtl' }}>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-10 px-5" 
+    style={{ direction: 'rtl' }}>
     {asmaulHusna.map(({ latin, arab, arti }, i) => (
       <div
         tabIndex={1}
+        key={i}
         className="text-black w-[100] px-5 py-3 rounded-md"
         style={{ direction: 'ltr', textAlign: 'right' }}
       >
