@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchSuratData } from "../api/listSurat";
+import { detailSurat } from "../api/detailSurat";
 
 const Home = () => {
   const [surat, setSurat] = useState([]);
@@ -21,20 +22,18 @@ const Home = () => {
     fetchData();
   }, []);
 
-  const detailSurat = async (suratId) => {
+  const getSuratDetail = async (suratId) => {
     try {
       const suratDetail = await detailSurat(suratId);
-      console.log(suratDetail);
+      return suratDetail
     } catch (error) {
-      console.log(error);
     }
   };
-
-  console.log(search);
 
   if (isLoading) {
     return <div className="">Loading</div>;
   }
+  
   return (
     <div className="p-5 pt-6 w-full bg-[#fff7e7]">
       <div className="mx-auto flex items-center">
@@ -58,7 +57,7 @@ const Home = () => {
             <Link
               to={`/ayat-surat/${item.nomor}`}
               key={item.nomor}
-              onClick={() => detailSurat(item.nomor)}
+              onClick={() => getSuratDetail(item.nomor)}
               className="w-full bg-[#116A7B] hover:bg-[#0d4550] hover:duration-200 px-3 py-4 rounded-md relative"
             >
               <div className="flex items-center gap-x-3 font-medium">
@@ -67,8 +66,8 @@ const Home = () => {
               </div>
               <div className="py-2 text-end">
                 <p className="text-2xl font-semibold mb-2">{item.nama}</p>
-                <p className="font-medium">
-                  {item.tempatTurun}
+                <p className="text-[14px] font-medium">
+                  - {item.tempatTurun}
                   <span className="pl-2">( {item.arti} )</span>
                 </p>
               </div>

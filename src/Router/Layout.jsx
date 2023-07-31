@@ -9,8 +9,8 @@ const Layout = () => {
       <div className="fixed">
         <Sidebar />
       </div>
-      <div className="main-content relative overflow-y-auto">
-        <Outlet />
+      <div className="main-content relative">
+        <Outlet/>
         <BackToTop />
       </div>
     </div>
